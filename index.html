@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo hacer un CRUD</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <main>
+        <div class="title">
+            <h2>LISTADO DE ESTUDIANTE</h2>
+        </div>
+        <!-- CONTENIDO DE BARRA -->
+        <div class="container">
+            <!-- SEARCH / BUSCADOR -->
+            <form action="" class="search-box">
+                <input type="text" placeholder="Buscador">
+                <button type="submit"><img src="./assets/img/lupa.png" alt="Lupa"></button>
+            </form>
+            <div class="boton-agregar">
+                <a href="#">Nuevo +</a>
+            </div>
+            <!-- REPORTE EN EXCEL -->
+            <div class="reporte-excel">
+                <button><img src="./assets/img/excel.png" alt="excel"></button>
+            </div>
+            <!-- REPORTE EN PDF -->
+            <div class="reporte-pdf">
+                <button><img src="./assets/img/pdf.png" alt="pdf"></button>
+            </div>
+            
+        </div>
+        <!-- TABLA DE DATOS --> 
+        <div class="container-tabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grado y Sección</th>
+                        <th>Estudiante</th>
+                        <th>Apoderado</th>
+                        <th>Celular</th>
+                        <th>Dirección</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-titulo="Sección:">1° A</td>
+                        <td data-titulo="Estudiante:">Angulo Tamaris, Mateo Valentino</td>
+                        <td data-titulo="Apoderado:">TAMARIS MUNAYCO, MARITZA ELIZABETH</td>
+                        <td data-titulo="Celular:">Sin detalle</td>
+                        <td data-titulo="Dirección:">Sin detalle</td>
+                        <td>
+                            <a href="#"><img src="./assets/img/editar.png" alt="editar"></a>
+                            <a href="#"><img src="./assets/img/eliminar.png" alt="eliminar"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-titulo="Sección:">1° A</td>
+                        <td data-titulo="Estudiante:">Arguedas Huaman, Andres David</td>
+                        <td data-titulo="Apoderado:">Sin detalle</td>
+                        <td data-titulo="Celular:">Sin detalle</td>
+                        <td data-titulo="Dirección:">Sin detalle</td>
+                        <td>
+                            <a href="#"><img src="./assets/img/editar.png" alt="editar"></a>
+                            <a href="#"><img src="./assets/img/eliminar.png" alt="eliminar"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

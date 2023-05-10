@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+}
+/* CONTAINER */
+.container{
+    display: flex;
+}
+.title{
+    color: #0999;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+/* BOTON DE NUEVO */
+.boton-agregar{
+    width: 80px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton-agregar a{
+    background: #83D175;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+}
+/* REPORTE EXCEL */
+.reporte-excel, .reporte-pdf{
+    width: 50px;
+    height: 50px;
+    margin: 0 4px;
+}
+.reporte-excel img, .reporte-pdf img{
+    width: 30px;
+}
+.reporte-excel button, .reporte-pdf button{
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    cursor: pointer;
+}
+/* BUSQUEDA */
+.search-box{
+    width: 90%;
+    max-width: 350px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #0999;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+.search-box input{
+    flex: 1;
+    padding: 15px 10px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 20px;
+}
+.search-box button img{
+    width: 25px;
+}
+.search-box button{
+    padding: 10px 12px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    cursor: pointer;
+}
+/* TABLA DE DATOS */
+.container-tabla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table{
+    border-collapse: collapse;
+    font-size: 14px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    padding: 0 10px;
+}
+thead{
+    background: #0999;
+    color: #fff;
+    text-align: center;
+}
+th{
+    padding: 20px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+td{
+    padding: 15px;
+    text-align: center;
+}
+td a img{
+    width: 20px;
+    margin: 0 5px;
+}
+tr{
+    border-bottom: 1px solid #dddddd;
+}
+
+@media (max-width: 850px){
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+    .reporte-excel, .reporte-pdf, .boton-agregar{
+        display: none;
+    }
+    table{
+        width: 95%;
+    }
+    thead{
+        display: none;
+    }
+    tr{
+        display: flex;
+        flex-direction: column;
+    }
+    td[data-titulo]{
+        display: flex;
+        text-align: start;
+    }
+    td[data-titulo]::before{
+        content: attr( data-titulo );
+        width: 90px;
+        color: silver;
+        font-weight: bold;
+    }
+}
