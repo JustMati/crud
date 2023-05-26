@@ -4,23 +4,17 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-body{
-    width: 100%;
+/* CONTAINER */
+.container-box{
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 100px auto;
-}
-/* CONTAINER */
-.container{
-    display: flex;
 }
 .title{
     color: #0999;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 50px;
+    margin: 50px 0;
 }
 /* BOTON DE NUEVO */
 .boton-agregar{
@@ -58,7 +52,7 @@ body{
     cursor: pointer;
 }
 /* BUSQUEDA */
-.search-box{
+.search-box-2{
     width: 90%;
     max-width: 350px;
     padding: 10px;
@@ -72,7 +66,7 @@ body{
     margin-right: 5px;
     margin-bottom: 20px;
 }
-.search-box input{
+.search-box-2 input{
     flex: 1;
     padding: 15px 10px;
     border: 0;
@@ -80,14 +74,102 @@ body{
     background: transparent;
     font-size: 20px;
 }
-.search-box button img{
+.search-box-2 button img{
     width: 25px;
 }
-.search-box button{
+.search-box-2 button{
     padding: 10px 12px;
     border: 0;
     outline: 0;
     background: transparent;
+    cursor: pointer;
+}
+/* MODAL */
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 2;
+}
+.modal .modal-container{
+    margin: auto;
+    background: #fff;
+    width: 90%;
+    max-width: 500px;
+    min-height: 80%;
+    overflow: hidden;
+    padding: 10px 8px;
+    box-shadow: 0 1px 6px 1px rgb(0 0 0 / 30%);
+    border-radius: 4px;
+    animation: animation 1.1s backwards;
+}
+@keyframes animation{
+    0%{
+      transform: translateY(150vh);
+    }
+}
+.modal .modal-content{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.modal .modal-close_btn{
+    width: 50px;
+    height: 30px;
+    font-size: 20px;
+    background: none;
+    color: #0999;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+.modal .modal-titulo{
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #0999;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.modal .form{
+    padding: 0 10px;
+    margin: 10px 0;
+}
+.modal .input-group{
+    display: flex;
+    flex-direction: column;
+}
+.modal .input-group label{
+    color: #0999;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.modal .input-group input{
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #edfff0;
+    border: 1px solid #f0faf1;
+    font-size: 12px;
+    color: #555;
+    outline: none;
+}
+.modal .boton-group{
+    display: flex;
+    justify-content: end;
+}
+.modal .modal-boton{
+    width: 100px;
+    padding: 10px;
+    margin: 0 10px;
+    color: #fff;
+    border: none;
+    background-color: #0999;
+    border-radius: 8px;
+    font-size: 14px;
     cursor: pointer;
 }
 /* TABLA DE DATOS */
@@ -95,11 +177,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 40px;
 }
 table{
     border-collapse: collapse;
     font-size: 14px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
     padding: 0 10px;
 }
 thead{
@@ -124,6 +208,8 @@ tr{
     border-bottom: 1px solid #dddddd;
 }
 
+
+
 @media (max-width: 850px){
     .container{
         display: flex;
@@ -133,7 +219,7 @@ tr{
         display: none;
     }
     table{
-        width: 95%;
+        width: 90%;
     }
     thead{
         display: none;
@@ -151,5 +237,8 @@ tr{
         width: 90px;
         color: silver;
         font-weight: bold;
+    }
+    .search-box-2 button{
+        display: none;
     }
 }

@@ -20,7 +20,7 @@
                 <button type="submit"><img src="./assets/img/lupa.png" alt="Lupa"></button>
             </form>
             <div class="boton-agregar">
-                <a href="#">Nuevo +</a>
+                <a href="#" onclick="openModal()">Nuevo +</a>
             </div>
             <!-- REPORTE EN EXCEL -->
             <div class="reporte-excel">
@@ -31,6 +31,45 @@
                 <button><img src="./assets/img/pdf.png" alt="pdf"></button>
             </div>
             
+        </div>
+        <!-- VENTANA MODAL -->
+        <div class="modal" id="modalAdd">
+            <!-- MODAL CONTAINER -->
+            <div class="modal-container">
+                <!-- MODAL CONTENT CERRAR -->
+                <div class="modal-content">
+                    <button typed="button" class="modal-close_btn" onclick="closeModal()">x</button>
+                </div>
+                <!-- MODAL INFO -->
+                <h2 class="modal-titulo">AGREGAR DATOS</h2>
+                <form action="#" class="form">
+                    <div class="input-group">
+                        <label>GRADO Y SECCIÓN</label>
+                        <input type="text" name="grado" placeholder="GRADO Y SECCIÓN">
+                        
+                        <label>ESTUDIANTE</label>
+                        <input type="text" name="estudiante" placeholder="ESTUDIANTE">
+                        
+                        <label>APODERADO</label>
+                        <input type="text" name="apoderado" placeholder=" APODERADO">
+                    
+                        <label>CELULAR</label>
+                        <input type="text" name="celular" placeholder="CELULAR">
+                        
+                        <label>DIRECCIÓN</label>
+                        <input type="text" name="direc" placeholder="DIRECCIÓN">
+                    </div>
+                </form>
+                <!-- MODAL CERRAR-->
+                <div class="boton-group">
+                    <div class="modal-guardar">
+                        <button type="button" class="modal-boton">Guardar</button>
+                    </div>
+                    <div class="modal-cerrar">
+                        <button type="button" class="modal-boton" onclick="closeModal()">Cerrar</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- TABLA DE DATOS --> 
         <div class="container-tabla">
@@ -72,5 +111,7 @@
             </table>
         </div>
     </main>
+    <!-- JavaScript -->
+    <script src="./assets/js/modal.js"></script>
 </body>
 </html>

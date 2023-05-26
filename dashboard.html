@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="./assets/css/prueba.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <nav class="sidebar close">
+        <header>
+
+            <div class="text logo">
+                <span class="name">I.E 22455</span>
+                <span class="admin">ADMIN</span>
+            </div>
+            <i class="bx bx-menu toggle"></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class="bx bx-search icon"></i>
+                    <input type="text" placeholder="Buscar...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-links">
+                        <a href="#">
+                            <i class="bx bx-home-alt icon"></i>
+                            <span class="text nav-links">DashBoard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-links">
+                        <a href="#">
+                            <i class="bx bx-pie-chart-alt icon"></i>
+                            <span class="text nav-links">Estadistica</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-links">
+                        <a href="#">
+                            <i class="bx bxs-user icon"></i>
+                            <span class="text nav-links">Lista</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-links">
+                        <a href="#">
+                            <i class="bx bxs-report icon"></i>
+                            <span class="text nav-links">Reporte</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class="bx bx-log-out icon"></i>
+                        <span class="text nav-text">Salir</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class="bx bx-moon icon moon"></i>
+                        <i class="bx bx-sun icon sun"></i>
+                    </div>
+                    <span class="mode-text text">Cambiar</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <main>
+            <div class="title">
+                <h2>LISTADO DE ESTUDIANTE</h2>
+            </div>
+            <!-- CONTENIDO DE BARRA -->
+            <div class="container-box">
+                <!-- SEARCH / BUSCADOR -->
+                <form action="" class="search-box-2">
+                    <input type="text" placeholder="Buscador">
+                    <button type="submit"><img src="./assets/img/lupa.png" alt="Lupa"></button>
+                </form>
+                <div class="boton-agregar">
+                    <a href="#" onclick="openModal()">Nuevo +</a>
+                </div>
+                <!-- REPORTE EN EXCEL -->
+                <div class="reporte-excel">
+                    <button><img src="./assets/img/excel.png" alt="excel"></button>
+                </div>
+                <!-- REPORTE EN PDF -->
+                <div class="reporte-pdf">
+                    <button><img src="./assets/img/pdf.png" alt="pdf"></button>
+                </div>
+                
+            </div>
+            <!-- VENTANA MODAL -->
+            <div class="modal" id="modalAdd">
+                <!-- MODAL CONTAINER -->
+                <div class="modal-container">
+                    <!-- MODAL CONTENT CERRAR -->
+                    <div class="modal-content">
+                        <button typed="button" class="modal-close_btn" onclick="closeModal()">x</button>
+                    </div>
+                    <!-- MODAL INFO -->
+                    <h2 class="modal-titulo">AGREGAR DATOS</h2>
+                    <form action="#" class="form">
+                        <div class="input-group">
+                            <label>GRADO Y SECCIÓN</label>
+                            <input type="text" name="grado" placeholder="GRADO Y SECCIÓN">
+                            
+                            <label>ESTUDIANTE</label>
+                            <input type="text" name="estudiante" placeholder="ESTUDIANTE">
+                            
+                            <label>APODERADO</label>
+                            <input type="text" name="apoderado" placeholder=" APODERADO">
+                        
+                            <label>CELULAR</label>
+                            <input type="text" name="celular" placeholder="CELULAR">
+                            
+                            <label>DIRECCIÓN</label>
+                            <input type="text" name="direc" placeholder="DIRECCIÓN">
+                        </div>
+                    </form>
+                    <!-- MODAL CERRAR-->
+                    <div class="boton-group">
+                        <div class="modal-guardar">
+                            <button type="button" class="modal-boton">Guardar</button>
+                        </div>
+                        <div class="modal-cerrar">
+                            <button type="button" class="modal-boton" onclick="closeModal()">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- TABLA DE DATOS --> 
+            <div class="container-tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Grado y Sección</th>
+                            <th>Estudiante</th>
+                            <th>Apoderado</th>
+                            <th>Celular</th>
+                            <th>Dirección</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-titulo="Sección:">1° A</td>
+                            <td data-titulo="Estudiante:">Angulo Tamaris, Mateo Valentino</td>
+                            <td data-titulo="Apoderado:">TAMARIS MUNAYCO, MARITZA ELIZABETH</td>
+                            <td data-titulo="Celular:">Sin detalle</td>
+                            <td data-titulo="Dirección:">Sin detalle</td>
+                            <td>
+                                <a href="#"><img src="./assets/img/editar.png" alt="editar"></a>
+                                <a href="#"><img src="./assets/img/eliminar.png" alt="eliminar"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-titulo="Sección:">1° A</td>
+                            <td data-titulo="Estudiante:">Arguedas Huaman, Andres David</td>
+                            <td data-titulo="Apoderado:">Sin detalle</td>
+                            <td data-titulo="Celular:">Sin detalle</td>
+                            <td data-titulo="Dirección:">Sin detalle</td>
+                            <td>
+                                <a href="#"><img src="./assets/img/editar.png" alt="editar"></a>
+                                <a href="#"><img src="./assets/img/eliminar.png" alt="eliminar"></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </section>
+
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
