@@ -8,10 +8,10 @@
 }
 :root{
 
-    --body-color: #9b27b00d;
+    --body-color: #FBFCFC;
     --sidebar-color: #ffffff;
     --primary-color: #0999;
-    --primary-color-light: #9827b00d;
+    --primary-color-light: #FBFCFC;
     --toggle-color: #DDDDDD;
     --text-color: #707070;
 
@@ -121,6 +121,7 @@ body.dark{
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 6px;
     font-size: 35px;
     cursor: pointer;
     transition: var(--tran-05);
@@ -257,9 +258,9 @@ body.dark .switch::before{
     padding: 12px 60px;
 }
 .sidebar.close ~ .home{
-    left: 78px;
+    left: 90px;
     height: 100vh;
-    width: calc(100% - 78px);
+    width: calc(100% - 90px);
 }
 body.dark .home .text{
     color: var(--text-color);
