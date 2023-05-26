@@ -242,3 +242,14 @@ tr{
         display: none;
     }
 }
+@media (max-width: 450px){
+    .title{
+        font-size: 25px;
+    }
+    .search-box-2{
+        margin: 0 0 20px 8px;
+    }
+    .container-tabla{
+        margin: 0 2px;
+    }
+}
